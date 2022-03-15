@@ -27,12 +27,10 @@ We have prepared different *.rosinstall* setup files that you can add to your RO
 ```Bash
 rosdep update
 cd ~/catkin_ws/src
-wstool init
-wstool merge https://raw.github.com/knowrob/knowrob/master/rosinstall/knowrob-base.rosinstall
-wstool update
+git clone git@github.com:kas-lab/knowrob.git
 rosdep install --ignore-src --from-paths .
 cd ~/catkin_ws
-catkin_make
+catkin build
 ```
 
 You may further need to set the *SWI_HOME_DIR* environment variable to the installation location of *swipl*:
